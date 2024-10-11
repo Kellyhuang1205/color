@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle and Rectangle</title>
+    <title>圓形和長方形交疊</title>
     <style>
         body {
             display: flex;
@@ -12,22 +12,27 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            position: relative;
         }
         .rectangle {
             width: 200px;
             height: 100px;
-            background-color: #3498db; /* Blue */
-            position: relative;
+            background-color: #3498db; /* 藍色 */
+            border: 2px solid black; /* 黑色邊框 */
+            position: absolute;
+            top: 50px; /* 調整位置 */
+            left: 50px; /* 調整位置 */
             z-index: 1;
         }
         .circle {
             width: 100px;
             height: 100px;
-            background-color: #e74c3c; /* Red */
+            background-color: yellow; /* 黃色內部 */
+            border: 2px solid red; /* 紅色邊框 */
             border-radius: 50%;
             position: absolute;
-            top: 50px; /* Adjust to overlap */
-            left: 100px; /* Adjust to overlap */
+            top: 50px; /* 調整位置 */
+            left: 200px; /* 調整位置使圓形右半在外面 */
             z-index: 2;
         }
     </style>
